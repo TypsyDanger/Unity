@@ -7,7 +7,8 @@ namespace CommandPattern
     public abstract class Command
     {
         protected float moveDistance = 0.5f;
-        public abstract void Execute(Transform objectTransform, bool moveFaster);
-        public virtual void Move(Transform objectTransform, bool moveFaster) {}
+        protected bool modifierApplied = false;
+        public abstract void Execute(Transform objectTransform, bool moveFaster = false);
+        public virtual void Move(Transform objectTransform, bool moveFaster = false) {}
     }
 }
