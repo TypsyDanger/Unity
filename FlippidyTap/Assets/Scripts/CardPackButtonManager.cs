@@ -7,15 +7,9 @@ public class CardPackButtonManager : MonoBehaviour {
 	private string _buttonMode;
 	private Animator _buttonAnimator;
 
-	// Use this for initialization
 	void Start () {
 		_gameManagerRef = GameObject.Find("GameManager").GetComponent<GameManager>();
 		_buttonAnimator = gameObject.GetComponent<Animator>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 
 	void OnMouseDown() {

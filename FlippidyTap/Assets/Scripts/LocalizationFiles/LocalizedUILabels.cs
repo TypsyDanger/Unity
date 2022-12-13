@@ -5,7 +5,7 @@ using System.Collections;
 public class LocalizedUILabels {
 
 	/* LocalizedUILabels
-	 * by tim@reallybigsmile.com
+	 * by tim.perry.wagner@gmail.com
 	 * last updated: 05/01/2018
 	 * 
 	 * Represents the different UI labels stored in the translation json.

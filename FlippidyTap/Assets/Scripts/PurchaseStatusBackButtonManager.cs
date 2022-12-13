@@ -7,15 +7,6 @@ public class PurchaseStatusBackButtonManager : MonoBehaviour {
 	private GameManager _gameManagerRef;
 	private Animator _thisAnimator;
 
-	// Use this for initialization
-	void Start () {
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
 	private void Awake() {
 		_gameManagerRef = GameObject.Find("GameManager").GetComponent<GameManager>();
 		_thisAnimator = gameObject.GetComponent<Animator>();

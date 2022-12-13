@@ -6,57 +6,6 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Analytics;
 
 public class GameManager : MonoBehaviour {
-
-	/* // OVERVIEW & DESCRIPTION
-	* GameManager.cs
-	* Author: tim@reallybigsmile.com
-	* Last edited: 03/14/2018
-	* 
-	* This class handles all things, including switching scenes, setting up the other manager objects (game, clock, score), 
-	* instantiating them and providing proxy methods they can communicate with eachother through.  The GameManager ensures 
-	* that it's persistent between scenes and cannot exist more than once.  It also instantiates and operates an _audioManager object that plays all sounds. 
-    * It can be referenced from other objects via the GameManager.
-	* 
-	* // IMPLEMENTATION AND USAGE
-	* 
-	* Implementation is in the "Main.unity" scene.  It detects if it already exists and prevents duplicates from being created when the user
-	* returns to the "Main" scene.  
-	* 
-	* Upon instantiation, the GameManager gets the highScore if it exists and displays it.  It also handles scene switches, as well as 
-	* setting up references to the Clock, Grid and Score Manager object when appropriate.
-	* 
-	* Several proxy methods exist to allow the other managers to communicate with eachother without needing to setup references to 
-	* eachother inside of themselves.
-	* 
-	* // METHOD LIST (see actual methods for descriptions).
-	* 
-	* - Awake()
-	* - checkSceneChange
-	* - updateHighScoreText
-	* - loadScene
-	* - getScore
-	* - getConsecutiveMatches
-	* - resetConsecutiveMatches
-    * - startSplashCountdown
-	* - updateAndReturnScore
-    * - initMainScreen
-	* - initGameplay
-    * - showAllGameplayUI
-    * - hideAllGameplayUI
-	* - checkBonusAndAddTimeToClock
-    * - checkAndCancelBonus
-	* - pauseClock
-	* - startClock
-	* - clockExpired    
-    * - triggerGameOver
-    * - showCurtain
-    * - hideCurtain
-	* - _returnToMain
-    * - playSound
-    * - incrementCurrentLevel
-    * - returnCurrentLevel
-	*/
-
 	private static GameManager _instance;
 	private static MusicManager _musicManager;
 	private GameObject _gridManagerObject;
@@ -166,12 +115,6 @@ public class GameManager : MonoBehaviour {
 	private const string _VIEW_MAIN_MENU_STATUS = "view_main_status";
 
 	void Awake() {
-		/* This checks to see if _instance is uninstantiated.  If it is, it assigns the current object to _instance which is used for safety
-		 * checks elsewhere in this class to ensure replicates of GameManager aren't instantiated.  It then ensures that this.gameObject can't
-		 * be destroyed between scene changes, instantiates the _scoreManager object and uh... does something with activeSceneChanged... not sure what anymore.
-		 * If _instance has been instantiated, it destroys the current this.gameObject because it's a replicate and deserves to die.  Stupid replicate.
-		 */
-
 		if (!_instance) {
 			_instance = this;
 
@@ -206,16 +149,9 @@ public class GameManager : MonoBehaviour {
 			_highestLevelMemName = "ftap_highest_level";
 
 			_playerHasReviewed = PlayerPrefs.GetInt(_hasReviewedMemName);
-
 			checkLanguageAndInitLocalization(PlayerPrefs.GetString(_languageMemName));
-
 			_timesPlayed = PlayerPrefs.GetInt(_timesPlayedMemName) + 1;
 			PlayerPrefs.SetInt(_timesPlayedMemName, _timesPlayed);
-
-			//_localizationManagerRef.initAndLocalize("english");
-			//_localizationManagerRef.initAndLocalize("pirate");
-			//_localizationManagerRef.initAndLocalize("sa_spanish");
-
 			_cardPackDataArray = _localizationManagerRef.returnCardPackArray();
 			_uiLabelDataLabels = _localizationManagerRef.returnUILevelLabels();
 
@@ -230,11 +166,7 @@ public class GameManager : MonoBehaviour {
 			}
 
 			_enduroModeInt = 0;
-
 			_scoreManager.setScoreIncrementAndMemNames(_coinValue, _playerBankMemName, _highestLevelMemName);
-
-			//resetEverythingAndSetBankAmount(10000, false);
-
 			_previewMode = true;
 
 			if (PlayerPrefs.GetInt(_musicMutedMemName) == 1) {
@@ -276,27 +208,11 @@ public class GameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update() {
 		if ((Input.GetKeyDown(KeyCode.Escape) && Application.platform == RuntimePlatform.Android) || (Input.GetKeyDown("space"))) {
-			/*AndroidJavaObject activity = new AndroidJavaClass("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject>("currentActivity");
-			activity.Call<bool>("moveTaskToBack", true);
-			//Application.Quit();*/
 			assessAndroidBackButtonTap();
 		}
 	}
 
 	private void assessAndroidBackButtonTap() {
-		/*
-	private const string _VIEW_MAIN_MENU = "view_mainMenu";
-	private const string _VIEW_MAIN_MENU_STORE = "view_main_store";
-	private const string _VIEW_MAIN_MENU_BUY = "view_main_buy";
-	private const string _VIEW_MAIN_MENU_INFO = "view_main_info";
-	private const string _VIEW_MAIN_MENU_CREDITS = "view_main_credits";
-	private const string _VIEW_MAIN_MENU_OPTIONS = "view_main_options";
-	private const string _VIEW_MAIN_MENU_LANGUAGE = "view_main_language";
-	private const string _VIEW_MAIN_MENU_RATE = "view_main_rate";
-	private const string _VIEW_GAME_PLAY = "view_game_play";
-	private const string _VIEW_GAME_OPTIONS = "view_game_options";
-	private const string _VIEW_MAIN_MENU_STATUS = "view_main_status";
-	*/
 		if(_currentView == _VIEW_MAIN_MENU){
 			// nothing, for now
 		} else if(_currentView == _VIEW_MAIN_MENU_STORE) {
@@ -323,11 +239,6 @@ public class GameManager : MonoBehaviour {
 	}
 
 	private void checkSceneChange(Scene scene, Scene scenetwo) {
-		/* This method first checks to make sure GameManager already exists.  if so, it checks the name of the current scene
-		 * and does a switch on it.  If it's GamePlay, it runs loadGridAndSetClock.  If it's Main, it updates the highscore 
-		 * using updateHighScoreText
-		 * 
-		 */
 		if (this == _instance) {
 			string theScene = SceneManager.GetActiveScene().name;
 
@@ -361,44 +272,27 @@ public class GameManager : MonoBehaviour {
 	}
 
 	private void updateHighScoreText() {
-		/* Finds and sets the text for the high score using the value of _scoreManager.getHighScore
-		 */
-
 		GameObject.Find("ScoreText").GetComponent<UnityEngine.UI.Text>().text = "" + _scoreManager.getHighScore();
 	}
 
 	public void loadScene(string theSceneArg) {
-		/* Loads a scene by name using the arg
-		 */
 		_musicManager.stopAudio();
 		SceneManager.LoadScene(theSceneArg);
 	}
 
 	public int getScore() {
-		/* It... gets the score from scoreManager...
-		 */
-
 		return _scoreManager.getScore();
 	}
 
 	public int getConsecutiveMatches() {
-		/* Big shock, but it gets consecutive matches from _scoreManager
-		 */
-
 		return _scoreManager.getConsecutiveMatches();
 	}
 
 	public void resetConsecutiveMatches() {
-		/* Solves world hunger... Actually it resets consecutive matches via the _scoreManager method.
-		 */
-
 		_scoreManager.resetConsecutiveMatches();
 	}
 
 	public void updateScore() {
-		/* Basically adds a match to the score and returns... Not sure where it's used
-		 */
-
 		_scoreManager.addMatchToScoreAndReturn();
 	}
 
@@ -446,13 +340,6 @@ public class GameManager : MonoBehaviour {
 	}
 
 	private void initGameplay() {
-		/* Instantiates a GridManagerPrefab, gets the GridManager script component from it and 
-		 * assigns to _gridManagerRef, then gets a reference to the clockText in the scene and
-		 * assigns it to _clockManagerRef.  So, this is wierd because I use two different approaches 
-		 * to getting access to objects when I could have just used one.  I did the former (load prefab as resource)
-		 * strictly for experiementation purposes.  I could have just thrown it in the scene and references it by it's
-		 * ID, but I didn't.
-		 */
 		_gamePlayStarted = true;
 		_gameOverAnimator = GameObject.Find("gameOverPop").GetComponent<Animator>();
 		_clockBGAnimator = GameObject.Find("clockUI").GetComponent<Animator>();
@@ -532,9 +419,6 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void checkBonusAndAddTimeToClock(int timeArg) {
-		/* Add time to clock, used when matches get consecutive match bonuses.
-		 */
-
 		if (returnIsEnduroMode()) {
 			_clockManagerRef.triggerBonus(timeArg);
 		}
@@ -549,32 +433,23 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void pauseClock() {
-		/* Believe it or not, it pauses the clock.  This is called by GridManager when resetting the grid.
-		 */
 		if (returnIsEnduroMode()) {
 			_clockManagerRef.pauseClockTick();
 		}
 	}
 
 	public void startClockAfterDelay(float delay) {
-		/* Unlike it's predecessor, it starts the clock
-		 */
-
 		if (returnIsEnduroMode()) {
 			_clockManagerRef.startClockAfterDelay(delay);
 		}
 	}
 
 	public void clockExpired() {
-		/* Clock ran out.  Wait a moment and _returnToMain
-		 */
-
 		triggerGameOver();
 		_gridManagerRef.destroyAllCardsAndRespondWithFloat();
 		float delay = 2.25f;
+		
 		Invoke("_returnToMain", delay);
-
-
 	}
 
 	private void triggerGameOver() {
@@ -602,17 +477,11 @@ public class GameManager : MonoBehaviour {
 	}
 
 	private void _returnToMain() {
-		/* Y'know, sometimes I think it's ironic that I'll write a comment that's longer than the actual code in the method...
-		 * but what the hell.  This returns to the Main scene.
-		 */
-
 		_musicManager.stopAudio();
 		loadScene("Main");
 	}
 
 	public void playSound(string soundToPlay) {
-		/* This guy facilitates playSound requests from other objects.  It leverages the audioManger object.
-         */
 		_audioManager.playSound(soundToPlay);
 	}
 
@@ -1045,7 +914,7 @@ public class GameManager : MonoBehaviour {
 		//print("game manager is attempting to buy full game");
 		showStatusFromPurchase();
 		StartCoroutine(_iapManager.BuyFullGame(1.0f));
-		//StartCoroutine(_iapManager.BuyError(8, 1.0f));
+		
 		_hasTriggeredPurchase = true;
 	}
 
@@ -1115,7 +984,7 @@ public class GameManager : MonoBehaviour {
 	public IEnumerator resetPurchaseStatus(float delay) {
 		//print("resetPurchaseStatus");
 		yield return new WaitForSeconds(delay);
-		//_localizationManagerRef.setIapStatusText(99, "", "");	// reset
+		
 		_purchaseStatusText.text = _purchaseStatusDefaultMessage;
 		_purchaseStatusBackButton.hideButton();
 	}
@@ -1180,13 +1049,4 @@ public class GameManager : MonoBehaviour {
 		print(string.Format("tracking event: {0}", eventArg));
 		Analytics.CustomEvent(eventArg);
 	}
-
-	/*private void OnApplicationFocus(bol focus) {
-		print("application came back: " + focus);
-		if(focus) {
-			if (_iapManager.returnPurchaseAttemptInProgress()) {
-				purchaseError("Did you cancel a purchase manually? If not, hold tight and finish what you're doing.");
-			}
-		}
-	}*/
 }

@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PackSelectionButtonManager : MonoBehaviour {
-
 	private GameManager _gameManagerRef;
 
-	// Use this for initialization
 	void Start () {
 		_gameManagerRef = GameObject.Find("GameManager").GetComponent<GameManager>();	
 	}

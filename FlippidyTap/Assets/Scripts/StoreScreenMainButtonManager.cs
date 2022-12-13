@@ -5,15 +5,8 @@ using UnityEngine;
 public class StoreScreenMainButtonManager : MonoBehaviour {
     private GameManager _gameManagerRef;
 
-	// Use this for initialization
     void Start () {
         _gameManagerRef = GameObject.Find("GameManager").GetComponent<GameManager>();
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
     }
 
     private void OnMouseOver(){

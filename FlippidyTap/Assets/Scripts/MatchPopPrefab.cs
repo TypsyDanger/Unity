@@ -3,21 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MatchPopPrefab : MonoBehaviour {
-
 	private MatchPopNumberManager[] _digitRefs;
 	private Animator _signAnimator;
 	private Animator _iconAnimator;
-
-
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-
-	private void Awake() {
-		
-	}
 
 	public void initNumberSequence(string iconName, string signName, int numberSequence) {
 		_signAnimator = gameObject.transform.Find("matchPopContainer").gameObject.transform.Find("matchSigns").GetComponent<Animator>();
@@ -61,10 +49,5 @@ public class MatchPopPrefab : MonoBehaviour {
 			_digitRefs[1].setBlank();
 			_digitRefs[2].setBlank();
 		}
-	}
-
-	// Update is called once per frame
-	void Update () {
-		
 	}
 }

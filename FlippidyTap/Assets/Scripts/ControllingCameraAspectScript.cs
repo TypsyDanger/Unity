@@ -53,7 +53,5 @@ public class ControllingCameraAspectScript : MonoBehaviour
 
 			camera.rect = rect;
 		}
-
 	}
-
 }

@@ -10,11 +10,6 @@ public class TrophyManager : MonoBehaviour {
         _gameManagerRef = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
-    // Update is called once per frame
-    void Update(){
-
-    }
-
     void OnMouseOver() {
         if (Input.GetMouseButtonDown(0)){
             _gameManagerRef.loadSocialHighscores();

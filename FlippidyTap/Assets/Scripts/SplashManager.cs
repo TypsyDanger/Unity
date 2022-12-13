@@ -20,7 +20,6 @@ public class SplashManager : MonoExtended {
 	public void evaluateLanguage() {
 		if (_gameManagerRef.isLanguageSet()) {
 			_gameManagerRef.loadScene("Main");
-
 		} else {
 			_gameManagerRef.loadScene("LanguageSet");
 		}

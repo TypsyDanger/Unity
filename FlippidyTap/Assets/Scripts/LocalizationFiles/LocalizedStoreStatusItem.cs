@@ -5,7 +5,7 @@ using System.Collections;
 public class LocalizedStoreStatusItem {
 
 	/* LocalizedStoreStatusItem
-	 * by tim@reallybigsmile.com
+	 * by tim.perry.wagner@gmail.com
 	 * last updated: 05/01/2018
 	 * 
 	 * Represents a particular status state in the translation json that may be caught and returned by the iOS or Google Play stores.

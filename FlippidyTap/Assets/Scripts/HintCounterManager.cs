@@ -2,9 +2,6 @@ using UnityEngine;
 using System.Collections;
 
 public class HintCounterManager : MonoExtended {
-	// V1.0 - 04/29/2018 - MOVING OVER TO FLIPPIDY TAP
-	// V1.1 - 04/29/2018 - Updated initHintCounter to check if started, also _hintCounterStarted being set to false in awake().  Other bits and pieces.
-
 	private int _hintCounterTick;
 	private bool _hintCounterStarted;
 	private bool _hintCounterPaused;

@@ -1,7 +1,6 @@
 using UnityEngine;
 
 public class MonoExtended : MonoBehaviour {
-	// v1.0 - 04/29/2018 - MOVING OVER TO FLIPPIDY TAP
 	protected GameManager _gameManagerRef;
 	protected string _className;
 

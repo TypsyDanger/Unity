@@ -13,16 +13,6 @@ public class StartButtonStackManager : MonoBehaviour {
 	private int _fullGameOwned;
 	private bool _lockActive;
 
-	// Use this for initialization
-	void Start () {
-        
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
     public void initStack(int gameMode) {
         _activeButton = 0; // 0 = regular, 1 = infinite s, 2 = infnite m, 3 = infinite l
 		_gameManagerRef = GameObject.Find("GameManager").GetComponent<GameManager>();
@@ -44,7 +34,6 @@ public class StartButtonStackManager : MonoBehaviour {
         _buttonAnimators[3] = GameObject.Find("playInfiniteHard").GetComponent<Animator>();
 
         setStartButton(gameMode);
-
     }
 
     private void setStartButton(int buttonArg) {

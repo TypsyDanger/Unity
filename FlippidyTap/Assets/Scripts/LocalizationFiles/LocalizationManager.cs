@@ -7,7 +7,7 @@ using UnityEngine;
 public class LocalizationManager : MonoBehaviour {
 
 	/* LocalizationManager 
-	 * by tim@reallybigsmile.com
+	 * by tim.perry.wagner@gmail.com
 	 * last updated: 05/02/2018
 	 * 
 	 * Provides interfaces for the game manager to do an initiale localization pass on the game after intialization a language.  

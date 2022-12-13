@@ -5,14 +5,6 @@ using UnityEngine;
 public class MatchPopNumberManager : MonoBehaviour {
 	private Animator _numberAnimator;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-
-	private void Awake() {
-	}
-
 	public void initNumber(int numberArg) {
 		initNumberAnimator();
 		float theNumber = numberArg / 10f;
@@ -28,10 +20,5 @@ public class MatchPopNumberManager : MonoBehaviour {
 	private void initNumberAnimator() {
 		_numberAnimator = gameObject.GetComponent<Animator>();
 
-	}
-
-	// Update is called once per frame
-	void Update () {
-		
 	}
 }

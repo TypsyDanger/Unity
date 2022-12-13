@@ -30,10 +30,6 @@ public class AudioManager : MonoBehaviour
 	private AudioClip _purchaseClip;
     private bool _muted;
 
-	void Start() {
-		
-	}
-
     void Awake() {
         //print("AudioManager started");
 		_audioSource = GetComponent<AudioSource>();
@@ -165,11 +161,6 @@ public class AudioManager : MonoBehaviour
     public void setMute() {
         _muted = true;
     }
-
-	// Update is called once per frame
-	void Update() {
-			
-	}
 
     public bool returnMuted() {
         return _muted;

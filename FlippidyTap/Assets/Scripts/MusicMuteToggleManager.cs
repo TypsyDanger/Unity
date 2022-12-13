@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MusicMuteToggleManager : MonoBehaviour {
-
     private GameManager _gameManagerRef;
     private Animator _animatorRef;
 
-	// Use this for initialization
 	void Start () {
         toggleButton();
 	}
@@ -16,11 +14,6 @@ public class MusicMuteToggleManager : MonoBehaviour {
         _gameManagerRef = GameObject.Find("GameManager").GetComponent<GameManager>();
         _animatorRef = this.GetComponent<Animator>();
     }
-	
-	// Update is called once per frame
-	void Update () {
-       
-	}
 
     private void toggleButton() {
         if (_gameManagerRef.isMusicMuted()){

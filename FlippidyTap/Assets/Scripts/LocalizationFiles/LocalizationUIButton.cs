@@ -4,7 +4,7 @@ using System.Collections;
 public class LocalizationUIButton : MonoExtended {
 
 	/* LocalizationUIButton
-	 * by tim@reallybigsmile.com
+	 * by tim.perry.wagner@gmail.com
 	 * last updated: 05/19/2018
 	 * 
 	 * This is inherited by in-game language buttons as they all require some base functionality and access to common constants.

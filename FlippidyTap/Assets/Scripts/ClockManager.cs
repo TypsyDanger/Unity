@@ -22,11 +22,6 @@ public class ClockManager : MonoBehaviour {
     private Animator _clockImageAnimator;
     private Animator _timerAnimator;
 
-	// Use this for initialization
-	void Awake() {
-		
-	}
-
 	void Start () {
         _clockText = GetComponentInParent<Text>();
 		_startingTime = 60;
@@ -101,8 +96,7 @@ public class ClockManager : MonoBehaviour {
     }
 
 	public void startClockAfterDelay(float delay) {
-        /* Called initially by GameManager
-         */
+        /* Called initially by GameManager */
         Invoke("startClock", delay);
 	}
 
@@ -120,16 +114,7 @@ public class ClockManager : MonoBehaviour {
         checkBonusModeAndStart();
         colorAndThrobCheck();
         _gameManagerRef.playSound("play_timeAward");
-
-        /*if(!_justAddedTime) {
-            _clockRunning = false;
-            _justAddedTime = true;
-            StopCoroutine(_clockTick());
-            Invoke("startClock", 0.5f);
-        } else {
-            _clockRunning = true;
-        }*/
-	}
+    }
 
     private void showClockBonusPop() {
         // Show the score pop text

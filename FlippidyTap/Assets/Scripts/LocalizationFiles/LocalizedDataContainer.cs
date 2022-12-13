@@ -4,7 +4,7 @@ using UnityEngine;
 public class LocalizedDataContainer{
 
 	/* LocalizedDataContainer
-	 * by tim@reallybigsmile.com
+	 * by tim.perry.wagner@gmail.com
 	 * last updated: 05/01/2018
 	 * 
 	 * Creates the required objects and numbers thereof to properly represent all data in the translation json.

@@ -7,23 +7,12 @@ public class MusicManager : MonoBehaviour
     private AudioClip _mainMusic;
     private AudioClip _gamePlaymusic;
     private bool _muted;
-
-	// Use this for initialization
-	void Start(){
-		
-	}
-
+    
     void Awake() {
         _musicSource = gameObject.AddComponent<AudioSource>();
         _muted = false;
         _musicSource.volume = 1f;
-        //print("Music Source: " + _musicSource);
     }
-
-	// Update is called once per frame
-	void Update(){
-			
-	}
 
     public void playMusic(string trackArg, bool isLoopedArg) {
         //print("music Source: "+_musicSource);

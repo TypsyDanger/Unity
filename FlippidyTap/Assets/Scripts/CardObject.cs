@@ -30,7 +30,6 @@ public class CardObject : MonoBehaviour {
 
 	private bool _isPaused;
 
-	// Use this for initialization
 	void Awake () {
 		// does not create the face of the card.  Handled by "initCard" method which is called by GridPrefab.cs
         _lockCard = true;
@@ -57,10 +56,6 @@ public class CardObject : MonoBehaviour {
         _colliderRef = this.GetComponent<BoxCollider2D>();
 
 		isFlipped = false;
-
-		/*if (_gameManagerRef.returnIsEnduroMode() && _gameManagerRef.returnCurrentLevel() > 6 && _gameManagerRef.returnPreviewMode() == true) {
-			cardAnimator.Play("intro_faceUp", -1, 0f);
-		}*/
 
         _gameManagerRef.playSound("play_cardAppear");
 
@@ -193,7 +188,6 @@ public class CardObject : MonoBehaviour {
 
 	public void unFlipCard() {
 		//print("unFlipCard");
-		//print (cardAnimator.GetCurrentAnimatorStateInfo(0).IsName("blazeh-flipped-stopped"));
 		cardAnimator.Play ("blazeh-unflip-2", -1, 0f);
 
 		isFlipped = false;

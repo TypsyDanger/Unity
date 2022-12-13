@@ -18,16 +18,6 @@ public class CardSelectionStackManager : MonoBehaviour {
 	private Animator _lockAnimator;
 	private Animator _packSelectCheckAnimator;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-
-	// Update is called once per frame
-	void Update() {
-
-	}
-
 	private void Awake() {
 		_gameManagerRef = GameObject.Find("GameManager").GetComponent<GameManager>();
 		_cardButtonStackAnimator = GameObject.Find("packButtonStack").GetComponent<Animator>();
@@ -75,10 +65,6 @@ public class CardSelectionStackManager : MonoBehaviour {
 		_packLockOverlayAnimator.Play("outIdle", -1, 0f);
 	}
 
-    private void setStartButton(int buttonArg) {
-		
-	}
-
 	public void switchButton(string direction) {
 		if (!_lockButton) {
 			_lockButton = true;
@@ -104,10 +90,8 @@ public class CardSelectionStackManager : MonoBehaviour {
 			}
 
 			_gameManagerRef.setCardPackTexts(_activeCardPack);
-
-			//print("activeCardPack: " + _activeCardPack + " activeCardPack ownership: " + _gameManagerRef.returnPackOwned(_activeCardPack) + " and lockIconActive: " + _lockIconActive);
-
 			_cardPackAnimators[_activeCardPack].Play("flipIn", -1, 0f);
+			
 			if (_gameManagerRef.returnPackOwned(_activeCardPack) == 0 && !_lockIconActive) {
 				_packLockOverlayAnimator.Play("flipIn", -1, 0f);
 				_packSelectCheckAnimator.Play("idleHide", -1, 0f);

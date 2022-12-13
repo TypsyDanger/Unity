@@ -4,49 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class GridManager : MonoBehaviour {
-
-
-	/* // OVERVIEW & DESCRIPTION
-    * GridManager.cs
-    * Author: tim@reallybigsmile.com
-    * Last edited: 02/12/2018
-    * 
-    * This class is the relative hum-dinger for the project.  It loads a grid based on the number of rows/columns set in class 
-    * vars, uses several arrays to create a matrix of pairs of cards, then instantiates the grid of actual cards
-    * using those arrays.  This also handles all interactions with the elements in the grid itself.
-    * 
-    * // IMPLEMENTATION AND USAGE
-    * So, implementation is all from GameManager.  It instantiates it from a prefab in the library. Then this thing uses
-    * a bunch of vars that a delcared at the class level to configure itself. Vars like number of rows, cols, etc.  
-    * There are a bunch of other variables used throughout the code that are declared at the class level, as well as
-    * several methods that communicate with the parent GameManager object.  
-    * 
-    * // METHOD LIST (see actual methods for descriptions).
-    * 
-    * - Start()
-    * - initGrid
-    * - initScore
-    * - invokedCreatedGrid
-    * - populateSequenceOfPairs
-    * - shuffleArray
-    * - createGrid
-    * - createCard
-    * - setCards
-    * - unflipMatch
-    * - unflipCards
-    * - resetCardRefs
-    * - approveFlip
-    * - setBackgroundSpeed
-    * - resetBackgrondSpeed
-    * - penalizeBackgroundSpeed
-    * - destroyAllCardsAndRespond
-    * - resetGrid
-    * - destroyCardObject
-    * - evaluateMatchCount
-    * - triggerLevelWin
-    * - showWinPop
-    */
-
 	private GameObject _cardPrefab;
 	private int _numPairs;
 	private int _numMatches;
@@ -72,10 +29,7 @@ public class GridManager : MonoBehaviour {
 	private GameObject _cardContainerRef;
 
 	private float _unPauseBackGroundSpeed;  // used for unpausing at the right speed.
-
-	//private Sprite[] _spriteDeck;
-
-	// Use this for initialization
+	
 	void Start() {
 		_flippedCards = new int[2];
 		_flippedCards[0] = -1;
@@ -114,9 +68,6 @@ public class GridManager : MonoBehaviour {
 			case 2:
 				_allCards = Resources.LoadAll<Sprite>("TileFaces/pack-2-flags-1");
 				break;
-			/*case 3:
-				_allCards = Resources.LoadAll<Sprite>("TileFaces/pack-3-flags-2");
-				break;*/
 		}
 
 		if (_gameManagerRef.returnCurrentLevel() > 1 && _gameManagerRef.returnIsEnduroMode()) {
@@ -138,7 +89,7 @@ public class GridManager : MonoBehaviour {
 
 		var i = 0;
 		while (i < _numPairs) {
-			var ran = Random.Range(0, _allCards.Length);  // SOMETHING WRONG HERE, CAUSING GAME TO CRASH AT LEVEL 13
+			var ran = Random.Range(0, _allCards.Length); 
 
 			if (_allCards[ran] != null) {
 				// check if card was already used in source array
@@ -167,301 +118,251 @@ public class GridManager : MonoBehaviour {
 					_numRows = 1;
 					_numCols = 2;
 					_scaleAdjust = 1f;
-					//_cardSizeAdjust = 1f;
 					break;
 				case 2:
 					_numRows = 2;
 					_numCols = 2;
 					_scaleAdjust = 1f;
-					//_cardSizeAdjust = 1f;
 					break;
 				case 3:
 					_numRows = 3;
 					_numCols = 2;
 					_scaleAdjust = 1f;
-					//_cardSizeAdjust = 1f;
 					break;
 				case 4:
 					_numRows = 2;
 					_numCols = 3;
 					_scaleAdjust = .95f;
-					//_cardSizeAdjust = .95f;
 					break;
 				case 5:
 					_numRows = 2;
 					_numCols = 4;
 					_scaleAdjust = .72f;
-					//_cardSizeAdjust = .72f;
 					break;
 				case 6:
 					_numRows = 4;
 					_numCols = 2;
 					_scaleAdjust = 1f;
-					//_cardSizeAdjust = 1f;
 					break;
 				case 7:
 					_numRows = 3;
 					_numCols = 4;
 					_scaleAdjust = 0.72f;
-					//_cardSizeAdjust = 0.72f;
 					break;
 				case 8:
 					_numRows = 4;
 					_numCols = 3;
 					_scaleAdjust = 0.75f;
-					//_cardSizeAdjust = 0.75f;
 					break;
 				case 9:
 					_numRows = 4;
 					_numCols = 3;
 					_scaleAdjust = 1f;
-					//_cardSizeAdjust = 1f;
 					break;
 				case 10:
 					_numRows = 6;
 					_numCols = 4;
 					_scaleAdjust = 0.72f;
-					//_cardSizeAdjust = 0.72f;
 					break;
 				case 11:
 					_numRows = 4;
 					_numCols = 2;
 					_scaleAdjust = 1f;
-					//_cardSizeAdjust = 1f;
 					break;
 				case 12:
 					_numRows = 3;
 					_numCols = 4;
 					_scaleAdjust = .72f;
-					//_cardSizeAdjust = .72f;
 					break;
 				case 13:
 					_numRows = 4;
 					_numCols = 4;
 					_scaleAdjust = .72f;
-					//_cardSizeAdjust = .72f;
 					break;
 				case 14:
 					_numRows = 3;
 					_numCols = 6;
 					_scaleAdjust = 0.485f;
-					//_cardSizeAdjust = 0.485f;
 					break;
 				case 15:
 					_numRows = 4;
 					_numCols = 4;
 					_scaleAdjust = 0.72f;
-					//_cardSizeAdjust = 0.72f;
 					break;
 				case 16:
 					_numRows = 4;
 					_numCols = 5;
 					_scaleAdjust = 0.55f;
-					//_cardSizeAdjust = 0.55f;
 					break;
 				case 17:
 					_numRows = 5;
 					_numCols = 4;
 					_scaleAdjust = 0.485f;
-					//_cardSizeAdjust = 0.485f;
 					break;
 				case 18:
 					_numRows = 4;
 					_numCols = 5;
 					_scaleAdjust = 0.58f;
-					//_cardSizeAdjust = 0.58f;
 					break;
 				case 19:
 					_numRows = 4;
 					_numCols = 4;
 					_scaleAdjust = 0.72f;
-					//_cardSizeAdjust = 0.72f;
 					break;
 				case 20:
 					_numRows = 6;
 					_numCols = 6;
 					_scaleAdjust = 0.485f;
-					//_cardSizeAdjust = 0.485f;
 					break;
 				case 21:
 					_numRows = 4;
 					_numCols = 4;
 					_scaleAdjust = 0.72f;
-					//_cardSizeAdjust = 0.72f;
 					break;
 				case 22:
 					_numRows = 4;
 					_numCols = 4;
 					_scaleAdjust = 0.72f;
-					//_cardSizeAdjust = 0.72f;
 					break;
 				case 23:
 					_numRows = 4;
 					_numCols = 5;
 					_scaleAdjust = 0.58f;
-					//_cardSizeAdjust = 0.58f;
 					break;
 				case 24:
 					_numRows = 4;
 					_numCols = 4;
 					_scaleAdjust = .72f;
-					//_cardSizeAdjust = .72f;
 					break;
 				case 25:
 					_numRows = 3;
 					_numCols = 6;
 					_scaleAdjust = 0.485f;
-					//_cardSizeAdjust = 0.485f;
 					break;
 				case 26:
 					_numRows = 4;
 					_numCols = 4;
 					_scaleAdjust = .72f;
-					//_cardSizeAdjust = .72f;
 					break;
 				case 27:
 					_numRows = 3;
 					_numCols = 4;
 					_scaleAdjust = .72f;
-					//_cardSizeAdjust = .72f;
 					break;
 				case 28:
 					_numRows = 4;
 					_numCols = 2;
 					_scaleAdjust = 1f;
-					//_cardSizeAdjust = 1f;
 					break;
 				case 29:
 					_numRows = 2;
 					_numCols = 4;
 					_scaleAdjust = .72f;
-					//_cardSizeAdjust = .72f;
 					break;
 				case 30:
 					_numRows = 6;
 					_numCols = 6;
 					_scaleAdjust = 0.485f;
-					//_cardSizeAdjust = 0.485f;
 					break;
 				case 31:
 					_numRows = 4;
 					_numCols = 5;
 					_scaleAdjust = 0.58f;
-					//_cardSizeAdjust = 0.58f;
 					break;
 				case 32:
 					_numRows = 6;
 					_numCols = 4;
 					_scaleAdjust = 0.72f;
-					//_cardSizeAdjust = 0.72f;
 					break;
 				case 33:
 					_numRows = 6;
 					_numCols = 4;
 					_scaleAdjust = 0.72f;
-					//_cardSizeAdjust = 0.72f;
 					break;
 				case 34:
 					_numRows = 4;
 					_numCols = 4;
 					_scaleAdjust = .72f;
-					//_cardSizeAdjust = .72f;
 					break;
 				case 35:
 					_numRows = 4;
 					_numCols = 5;
 					_scaleAdjust = .58f;
-					//_cardSizeAdjust = .58f;
 					break;
 				case 36:
 					_numRows = 6;
 					_numCols = 3;
 					_scaleAdjust = .72f;
-					//_cardSizeAdjust = .72f;
 					break;
 				case 37:
 					_numRows = 6;
 					_numCols = 2;
 					_scaleAdjust = .72f;
-					//_cardSizeAdjust = .72f;
 					break;
 				case 38:
 					_numRows = 6;
 					_numCols = 4;
 					_scaleAdjust = .72f;
-					//_cardSizeAdjust = .72f;
 					break;
 				case 39:
 					_numRows = 6;
 					_numCols = 3;
 					_scaleAdjust = .72f;
-					//_cardSizeAdjust = .72f;
 					break;
 				case 40:
 					_numRows = 7;
 					_numCols = 6;
 					_scaleAdjust = .49f;
-					//_cardSizeAdjust = .49f;
 					break;
 				case 41:
 					_numRows = 2;
 					_numCols = 2;
 					_scaleAdjust = 1f;
-					//_cardSizeAdjust = 1f;
 					break;
 				case 42:
 					_numRows = 4;
 					_numCols = 2;
 					_scaleAdjust = 1f;
-					//_cardSizeAdjust = 1f;
 					break;
 				case 43:
 					_numRows = 4;
 					_numCols = 3;
 					_scaleAdjust = 1f;
-					//_cardSizeAdjust = 1f;
 					break;
 				case 44:
 					_numRows = 5;
 					_numCols = 4;
 					_scaleAdjust = .72f;
-					//_cardSizeAdjust = .72f;
 					break;
 				case 45:
 					_numRows = 6;
 					_numCols = 5;
 					_scaleAdjust = .58f;
-					//_cardSizeAdjust = .58f;
 					break;
 				case 46:
 					_numRows = 6;
 					_numCols = 6;
 					_scaleAdjust = .485f;
-					//_cardSizeAdjust = .485f;
 					break;
 				case 47:
 					_numRows = 6;
 					_numCols = 6;
 					_scaleAdjust = .485f;
-					//_cardSizeAdjust = .485f;
 					break;
 				case 48:
 					_numRows = 7;
 					_numCols = 6;
 					_scaleAdjust = .485f;
-					//_cardSizeAdjust = .485f;
 					break;
 				case 49:
 					_numRows = 7;
 					_numCols = 6;
 					_scaleAdjust = .485f;
-					//_cardSizeAdjust = .485f;
 					break;
 				default:
 					_numRows = 8;
 					_numCols = 6;
 					_scaleAdjust = 0.485f;
-					//_cardSizeAdjust = 0.485f;
 					break;
 			}
 		} else {
@@ -470,19 +371,16 @@ public class GridManager : MonoBehaviour {
 					_numRows = 4;
 					_numCols = 3;
 					_scaleAdjust = 1f;
-					//_cardSizeAdjust = 1f;
 					break;
 				case 2:
 					_numRows = 5;
 					_numCols = 4;
 					_scaleAdjust = 0.75f;
-					//_cardSizeAdjust = 0.75f;
 					break;
 				case 3:
 					_numRows = 8;
 					_numCols = 6;
 					_scaleAdjust = 0.485f;
-					//_cardSizeAdjust = 0.485f;
 					break;
 			}
 		}
@@ -513,14 +411,11 @@ public class GridManager : MonoBehaviour {
 		var i = 0;
 		var j = 0;
 
-		//var outString = "";
-
 		while (i < length) {
 			if (i > 1 && i % 2 == 0)
 				j += 1;
 
 			tempArr[i] = j;
-			// outString += tempArr [i] + ", ";
 
 			i++;
 		}
@@ -534,8 +429,6 @@ public class GridManager : MonoBehaviour {
 		int[] tempArr = new int[sourceArray.Length];
 		int[] sentinelArr = sourceArray;
 
-		// var outString = "";
-
 		var i = 0;
 
 		while (i < sourceArray.Length) {
@@ -543,8 +436,6 @@ public class GridManager : MonoBehaviour {
 			if (sentinelArr[ran] != -1) {
 				tempArr[i] = sentinelArr[ran];
 				sentinelArr[ran] = -1;
-
-				// outString += tempArr [i] + ", ";
 
 				i++;
 			}
@@ -567,7 +458,6 @@ public class GridManager : MonoBehaviour {
 
 		for (var i = 0; i < _numCols; i++) {
 			for (var j = 0; j < _numRows; j++) {
-				//print("createCard iteration: " + totalIterations);
 				StartCoroutine(createCard(totalIterations, cardSequenceArg[totalIterations], xPos, yPos));
 
 				yPos -= height;
@@ -598,7 +488,6 @@ public class GridManager : MonoBehaviour {
 			StartCoroutine(enablePlayMode(delay));
 		} else {
 			StartCoroutine(unlockAllCards(false, 0.31f));
-			//StartCoroutine(unlockAllCards(false, 3f));
 			StartCoroutine(enablePlayMode(0.31f));
 		}
 	}
@@ -647,7 +536,6 @@ public class GridManager : MonoBehaviour {
 				continue;
 			}
 
-			//print(string.Format("Getting New Pair! rangeMax: {0}, ran: {1}, counterPart: {2}", rangeMax, ran, counterPart));
 			var firstMatchedCheck = _allCardScriptsRefs[ran].returnMatched();
 			var secondMatchedCheck = _allCardScriptsRefs[counterPart].returnMatched();
 
@@ -659,8 +547,6 @@ public class GridManager : MonoBehaviour {
 				//print("didn't find a suitable pair");
 			}
 		}
-
-		//print("found counterpart pair: " + ran + " and " + counterPart);
 
 	}
 
@@ -686,7 +572,6 @@ public class GridManager : MonoBehaviour {
 				tempID = i;
 			}
 		}
-		//print("getCounterPartByCardNum, returning: " + tempID);
 
 		return tempID;
 	}
@@ -718,7 +603,6 @@ public class GridManager : MonoBehaviour {
 				_allCardScriptsRefs[i].unPauseCard();
 			}
 		}
-		//print("unlockedAllCards");
 	}
 
 	private void lockAllCards(bool pauseArg) {
@@ -730,7 +614,6 @@ public class GridManager : MonoBehaviour {
 				_allCardScriptsRefs[i].pauseCard();
 			}
 		}
-		//print("locked all cards completed");
 	}
 
 	public void pause() {
@@ -904,11 +787,6 @@ public class GridManager : MonoBehaviour {
 		_gameManagerRef.updateWinPopLevelText();
 
 		_winPopAnimator.Play("winPopPlay");
-	}
-
-	// Update is called once per frame
-	void Update() {
-
 	}
 
 	public void requestMatch(CardObject cardReference) {

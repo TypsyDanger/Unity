@@ -5,7 +5,7 @@ using System.Collections;
 public class SocialManager : MonoBehaviour {
 	private bool _authenticated;
 	private string _scoreBoardName;
-	// Use this for initialization
+	
 	void Start() {
 		_authenticated = false;
 		checkAuthentication();
@@ -13,9 +13,9 @@ public class SocialManager : MonoBehaviour {
 
 	void Awake() {
 		#if UNITY_ANDROID
-			_scoreBoardName = "CgkI7N_OtLcEEAIQAQ";
+		_scoreBoardName = "CgkI7N_OtLcEEAIQAQ";
 		#elif UNITY_IPHONE
-			_scoreBoardName = "grp.flippidytapleaderboard";
+		_scoreBoardName = "grp.flippidytapleaderboard";
 		#endif
 	}
 
@@ -25,10 +25,7 @@ public class SocialManager : MonoBehaviour {
 
     private void ProcessAuthentication(bool success) {
         if (success) {
-            //print("Authenticated, checking achievements");
             _authenticated = true;
-            // Request loaded achievements, and register a callback for processing them
-            //Social.LoadAchievements(ProcessLoadedAchievements);
         } else {
             print("Failed to authenticate");
         }
@@ -40,7 +37,7 @@ public class SocialManager : MonoBehaviour {
         } else {
             //print("Got " + achievements.Length + " achievements");
         }
-        // You can also call into the functions like this
+
         Social.ReportProgress("Achievement01", 100.0, result => {
 			if (result) {
 				//print("Successfully reported achievement progress");
@@ -69,10 +66,5 @@ public class SocialManager : MonoBehaviour {
 		} else {
 			Debug.Log("score submission failed");
 		}
-	}
-
-	// Update is called once per frame
-	void Update() {
-			
 	}
 }

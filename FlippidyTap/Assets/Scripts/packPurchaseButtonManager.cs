@@ -5,7 +5,6 @@ using UnityEngine;
 public class packPurchaseButtonManager : MonoBehaviour {
 	private GameManager _gameManagerRef;
 
-	// Use this for initialization
 	void Start() {
 		_gameManagerRef = GameObject.Find("GameManager").GetComponent<GameManager>();
 	}
