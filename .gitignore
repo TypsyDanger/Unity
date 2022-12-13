@@ -1,6 +1,9 @@
+
+DesignPatterns/.idea/*
 DesignPatterns/Logs/*
 DesignPatterns/Library/PackageCache/*
 DesignPatterns/Temp/*
+FlippidyTap/Assets/.idea*
 FlippidyTap/Builds/* 
 FlippidyTap/KeyStores/* 
 FlippidyTap/GooglePlayConstants/* 
