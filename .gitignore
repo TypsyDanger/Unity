@@ -1,133 +1,136 @@
-
-DesignPatterns/.idea/*
-DesignPatterns/Logs/*
-DesignPatterns/Library/PackageCache/*
-DesignPatterns/Temp/*
-FlippidyTap/Assets/.idea*
-FlippidyTap/Builds/* 
-FlippidyTap/KeyStores/* 
-FlippidyTap/GooglePlayConstants/* 
-FlippidyTap/_WorkingAssets_Unprocessed/* 
-FlippidyTap/Asset packs/* 
-FlippidyTap/Assets copy/* 
-FlippidyTap/TestProjectiOS.sln
-FlippidyTap/TestProjectiOS.userprefs
-FlippidyTap/UnityPackageManager/manifest.json
-FlippidyTap/Assembly-CSharp.csproj
-FlippidyTap/flippidytap.csproj
-FlippidyTap/flippidytap.Editor.csproj
-FlippidyTap/flippidytap.Editor.Plugins.csproj
-FlippidyTap/flippidytap.Plugins.csproj
-FlippidyTap/flippidytap.sln
-FlippidyTap/MemoryGameTesting.csproj
-FlippidyTap/MemoryGameTesting.sln
-FlippidyTap/MemoryGameTesting.userprefs
-FlippidyTap/.vs/flippidytap/xs/UserPrefs.xml
-FlippidyTap/_WorkingAssets_Unprocessed/*
-FlippidyTap/Asset packs/memGameAssetPack-v1-11212017.unitypackage
-FlippidyTap/Assets copy/*
-FlippidyTap/KeyStores/*
-FlippidyTap/Library/AnnotationManager
-FlippidyTap/Library/assetDatabase3
-FlippidyTap/Library/AssetImportState
-FlippidyTap/Library/BuildPlayer.prefs
-FlippidyTap/Library/BuildSettings.asset
-FlippidyTap/Library/CurrentLayout.dwlt
-FlippidyTap/Library/CurrentMaximizeLayout.dwlt
-FlippidyTap/Library/EditorInstance.json
-FlippidyTap/Library/EditorUserBuildSettings.asset
-FlippidyTap/Library/EditorUserSettings.asset
-FlippidyTap/Library/expandedItems
-FlippidyTap/Library/il2cpp_cache 2017.2.0f3 (46dda1414e51)
-FlippidyTap/Library/InspectorExpandedItems.asset
-FlippidyTap/Library/LastBuild.buildreport
-FlippidyTap/Library/LastSceneManagerSetup.txt
-FlippidyTap/Library/LibraryFormatVersion.txt
-FlippidyTap/Library/MonoManager.asset
-FlippidyTap/Library/ProjectSettings.asset
-FlippidyTap/Library/ScriptMapper
-FlippidyTap/Library/ShaderCache.db
-FlippidyTap/Library/shadercompiler-UnityShaderCompiler0.log
-FlippidyTap/Library/shadercompiler-UnityShaderCompiler1.log
-FlippidyTap/Library/shadercompiler-UnityShaderCompiler2.log
-FlippidyTap/Library/shadercompiler-UnityShaderCompiler3.log
-FlippidyTap/Library/shadercompiler-UnityShaderCompiler4.log
-FlippidyTap/Library/shadercompiler-UnityShaderCompiler5.log
-FlippidyTap/Library/shadercompiler-UnityShaderCompiler6.log
-FlippidyTap/Library/shadercompiler-UnityShaderCompiler7.log
-FlippidyTap/Library/SpriteAtlasDatabase.asset
-FlippidyTap/Library/TilemapEditorUserSettings.asset
-FlippidyTap/Library/GridBrush/UnityEditor.GridBrush.asset
-FlippidyTap/Library/il2cpp_cache/*
-FlippidyTap/Library/metadata/*
-FlippidyTap/Library/PlayerDataCache/*
-FlippidyTap/Library/ScriptAssemblies/*
-FlippidyTap/Library/ScriptAssemblies/BuiltinAssemblies.stamp
-FlippidyTap/Library/ShaderCache/*
-FlippidyTap/Library/Timeline/5a8a3b29c19584edaa9e662ffabcd643.pref
-FlippidyTap/Library/Timeline/f83a4413179db4b2a86d5b047e813339.pref
-FlippidyTap/Library/webgl_cache/linkresult_asm_B8F686512876A180475475CAE79EF2A1/build.asm.js
-FlippidyTap/Library/webgl_cache/linkresult_asm_B8F686512876A180475475CAE79EF2A1/build.js
-FlippidyTap/Library/webgl_cache/linkresult_asm_B8F686512876A180475475CAE79EF2A1/build.js.mem
-FlippidyTap/obj/Debug/Assembly-CSharp.csproj.CopyComplete
-FlippidyTap/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache
-FlippidyTap/obj/Debug/Assembly-CSharp.csproj.FileListAbsolute.txt
-FlippidyTap/obj/Debug/Assembly-CSharp.csproj.FilesWrittenAbsolute.txt
-FlippidyTap/obj/Debug/Assembly-CSharp.csprojResolveAssemblyReference.cache
-FlippidyTap/obj/Debug/Assembly-CSharp.dll
-FlippidyTap/obj/Debug/Assembly-CSharp.dll.mdb
-FlippidyTap/obj/Debug/Assembly-CSharp.pdb
-FlippidyTap/ProjectSettings/AndroidResolverDependencies.xml
-FlippidyTap/ProjectSettings/AudioManager.asset
-FlippidyTap/ProjectSettings/ClusterInputManager.asset
-FlippidyTap/ProjectSettings/DynamicsManager.asset
-FlippidyTap/ProjectSettings/EditorBuildSettings.asset
-FlippidyTap/ProjectSettings/EditorSettings.asset
-FlippidyTap/ProjectSettings/GooglePlayGameSettings.txt
-FlippidyTap/ProjectSettings/GraphicsSettings.asset
-FlippidyTap/ProjectSettings/GvhProjectSettings.xml
-FlippidyTap/ProjectSettings/InputManager.asset
-FlippidyTap/ProjectSettings/NavMeshAreas.asset
-FlippidyTap/ProjectSettings/NetworkManager.asset
-FlippidyTap/ProjectSettings/Physics2DSettings.asset
-FlippidyTap/ProjectSettings/ProjectSettings.asset
-FlippidyTap/ProjectSettings/ProjectVersion.txt
-FlippidyTap/ProjectSettings/QualitySettings.asset
-FlippidyTap/ProjectSettings/TagManager.asset
-FlippidyTap/ProjectSettings/TimeManager.asset
-FlippidyTap/ProjectSettings/UnityConnectSettings.asset
-FlippidyTap/Temp/GoogleAarExplodeCache.xml
-FlippidyTap/Temp/tempFile.res
-FlippidyTap/Temp/tempFile.resG
-FlippidyTap/Temp/tempFile.resS
-FlippidyTap/Temp/UnityLockfile
-FlippidyTap/Temp/*
-FlippidyTap/Assets/Fonts.meta
-FlippidyTap/Assets/GooglePlayConstants.meta
-FlippidyTap/Assets/GooglePlayGames.meta
-FlippidyTap/Assets/iOS Assets.meta
-FlippidyTap/Assets/json.meta
-FlippidyTap/Assets/Misc.meta
-FlippidyTap/Assets/PlayServicesResolver.meta
-FlippidyTap/Assets/Plugins.meta
-FlippidyTap/Assets/RegionFrancaisButtonManager.cs
-FlippidyTap/Assets/RegionFrancaisButtonManager.cs.meta
-FlippidyTap/Assets/Scenes.meta
-FlippidyTap/Assets/Sprites.meta
-FlippidyTap/Assets/Texture.meta
-FlippidyTap/Assets/Fonts/Jelly Donuts.ttf
-FlippidyTap/Assets/Fonts/Jelly Donuts.ttf.meta
-FlippidyTap/Assets/Fonts/PressStart2P.ttf
-FlippidyTap/Assets/Fonts/PressStart2P.ttf.meta
-FlippidyTap/Assets/GooglePlayConstants/*
-FlippidyTap/Assets/GooglePlayGames/*
-FlippidyTap/Assets/iOS Assets/*
-FlippidyTap/Assets/Misc/*
-FlippidyTap/Assets/PlayServicesResolver/*
-FlippidyTap/Assets/Plugins/*
-FlippidyTap/Assets/Scenes/*
-FlippidyTap/Assets/Sprites/*
-FlippidyTap/Assets/Texture/Coin 1.mat
-FlippidyTap/Assets/Texture/Coin 1.mat.meta
-FlippidyTap/Assets/Texture/Sparkle 1.mat
-FlippidyTap/Assets/Texture/Sparkle 1.mat.meta
+/PlayFabIntegration/.idea
+/PlayFabIntegration/Logs/*
+/PlayFabIntegration/
+/DesignPatterns/.idea
+/DesignPatterns/Logs/*
+/DesignPatterns/Library/PackageCache/*
+/DesignPatterns/Temp/*
+/FlippidyTap/Assets/.idea
+/FlippidyTap/Builds/* 
+/FlippidyTap/KeyStores/* 
+/FlippidyTap/GooglePlayConstants/* 
+/FlippidyTap/_WorkingAssets_Unprocessed/* 
+/FlippidyTap/Asset packs/* 
+/FlippidyTap/Assets copy/* 
+/FlippidyTap/TestProjectiOS.sln
+/FlippidyTap/TestProjectiOS.userprefs
+/FlippidyTap/UnityPackageManager/manifest.json
+/FlippidyTap/Assembly-CSharp.csproj
+/FlippidyTap/flippidytap.csproj
+/FlippidyTap/flippidytap.Editor.csproj
+/FlippidyTap/flippidytap.Editor.Plugins.csproj
+/FlippidyTap/flippidytap.Plugins.csproj
+/FlippidyTap/flippidytap.sln
+/FlippidyTap/MemoryGameTesting.csproj
+/FlippidyTap/MemoryGameTesting.sln
+/FlippidyTap/MemoryGameTesting.userprefs
+/FlippidyTap/.vs//FlippidyTap/xs/UserPrefs.xml
+/FlippidyTap/_WorkingAssets_Unprocessed/*
+/FlippidyTap/Asset packs/memGameAssetPack-v1-11212017.unitypackage
+/FlippidyTap/Assets copy/*
+/FlippidyTap/KeyStores/*
+/FlippidyTap/Library/AnnotationManager
+/FlippidyTap/Library/assetDatabase3
+/FlippidyTap/Library/AssetImportState
+/FlippidyTap/Library/BuildPlayer.prefs
+/FlippidyTap/Library/BuildSettings.asset
+/FlippidyTap/Library/CurrentLayout.dwlt
+/FlippidyTap/Library/CurrentMaximizeLayout.dwlt
+/FlippidyTap/Library/EditorInstance.json
+/FlippidyTap/Library/EditorUserBuildSettings.asset
+/FlippidyTap/Library/EditorUserSettings.asset
+/FlippidyTap/Library/expandedItems
+/FlippidyTap/Library/il2cpp_cache 2017.2.0f3 (46dda1414e51)
+/FlippidyTap/Library/InspectorExpandedItems.asset
+/FlippidyTap/Library/LastBuild.buildreport
+/FlippidyTap/Library/LastSceneManagerSetup.txt
+/FlippidyTap/Library/LibraryFormatVersion.txt
+/FlippidyTap/Library/MonoManager.asset
+/FlippidyTap/Library/ProjectSettings.asset
+/FlippidyTap/Library/ScriptMapper
+/FlippidyTap/Library/ShaderCache.db
+/FlippidyTap/Library/shadercompiler-UnityShaderCompiler0.log
+/FlippidyTap/Library/shadercompiler-UnityShaderCompiler1.log
+/FlippidyTap/Library/shadercompiler-UnityShaderCompiler2.log
+/FlippidyTap/Library/shadercompiler-UnityShaderCompiler3.log
+/FlippidyTap/Library/shadercompiler-UnityShaderCompiler4.log
+/FlippidyTap/Library/shadercompiler-UnityShaderCompiler5.log
+/FlippidyTap/Library/shadercompiler-UnityShaderCompiler6.log
+/FlippidyTap/Library/shadercompiler-UnityShaderCompiler7.log
+/FlippidyTap/Library/SpriteAtlasDatabase.asset
+/FlippidyTap/Library/TilemapEditorUserSettings.asset
+/FlippidyTap/Library/GridBrush/UnityEditor.GridBrush.asset
+/FlippidyTap/Library/il2cpp_cache/*
+/FlippidyTap/Library/metadata/*
+/FlippidyTap/Library/PlayerDataCache/*
+/FlippidyTap/Library/ScriptAssemblies/*
+/FlippidyTap/Library/ScriptAssemblies/BuiltinAssemblies.stamp
+/FlippidyTap/Library/ShaderCache/*
+/FlippidyTap/Library/Timeline/5a8a3b29c19584edaa9e662ffabcd643.pref
+/FlippidyTap/Library/Timeline/f83a4413179db4b2a86d5b047e813339.pref
+/FlippidyTap/Library/webgl_cache/linkresult_asm_B8F686512876A180475475CAE79EF2A1/build.asm.js
+/FlippidyTap/Library/webgl_cache/linkresult_asm_B8F686512876A180475475CAE79EF2A1/build.js
+/FlippidyTap/Library/webgl_cache/linkresult_asm_B8F686512876A180475475CAE79EF2A1/build.js.mem
+/FlippidyTap/obj/Debug/Assembly-CSharp.csproj.CopyComplete
+/FlippidyTap/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache
+/FlippidyTap/obj/Debug/Assembly-CSharp.csproj.FileListAbsolute.txt
+/FlippidyTap/obj/Debug/Assembly-CSharp.csproj.FilesWrittenAbsolute.txt
+/FlippidyTap/obj/Debug/Assembly-CSharp.csprojResolveAssemblyReference.cache
+/FlippidyTap/obj/Debug/Assembly-CSharp.dll
+/FlippidyTap/obj/Debug/Assembly-CSharp.dll.mdb
+/FlippidyTap/obj/Debug/Assembly-CSharp.pdb
+/FlippidyTap/ProjectSettings/AndroidResolverDependencies.xml
+/FlippidyTap/ProjectSettings/AudioManager.asset
+/FlippidyTap/ProjectSettings/ClusterInputManager.asset
+/FlippidyTap/ProjectSettings/DynamicsManager.asset
+/FlippidyTap/ProjectSettings/EditorBuildSettings.asset
+/FlippidyTap/ProjectSettings/EditorSettings.asset
+/FlippidyTap/ProjectSettings/GooglePlayGameSettings.txt
+/FlippidyTap/ProjectSettings/GraphicsSettings.asset
+/FlippidyTap/ProjectSettings/GvhProjectSettings.xml
+/FlippidyTap/ProjectSettings/InputManager.asset
+/FlippidyTap/ProjectSettings/NavMeshAreas.asset
+/FlippidyTap/ProjectSettings/NetworkManager.asset
+/FlippidyTap/ProjectSettings/Physics2DSettings.asset
+/FlippidyTap/ProjectSettings/ProjectSettings.asset
+/FlippidyTap/ProjectSettings/ProjectVersion.txt
+/FlippidyTap/ProjectSettings/QualitySettings.asset
+/FlippidyTap/ProjectSettings/TagManager.asset
+/FlippidyTap/ProjectSettings/TimeManager.asset
+/FlippidyTap/ProjectSettings/UnityConnectSettings.asset
+/FlippidyTap/Temp/GoogleAarExplodeCache.xml
+/FlippidyTap/Temp/tempFile.res
+/FlippidyTap/Temp/tempFile.resG
+/FlippidyTap/Temp/tempFile.resS
+/FlippidyTap/Temp/UnityLockfile
+/FlippidyTap/Temp/*
+/FlippidyTap/Assets/Fonts.meta
+/FlippidyTap/Assets/GooglePlayConstants.meta
+/FlippidyTap/Assets/GooglePlayGames.meta
+/FlippidyTap/Assets/iOS Assets.meta
+/FlippidyTap/Assets/json.meta
+/FlippidyTap/Assets/Misc.meta
+/FlippidyTap/Assets/PlayServicesResolver.meta
+/FlippidyTap/Assets/Plugins.meta
+/FlippidyTap/Assets/RegionFrancaisButtonManager.cs
+/FlippidyTap/Assets/RegionFrancaisButtonManager.cs.meta
+/FlippidyTap/Assets/Scenes.meta
+/FlippidyTap/Assets/Sprites.meta
+/FlippidyTap/Assets/Texture.meta
+/FlippidyTap/Assets/Fonts/Jelly Donuts.ttf
+/FlippidyTap/Assets/Fonts/Jelly Donuts.ttf.meta
+/FlippidyTap/Assets/Fonts/PressStart2P.ttf
+/FlippidyTap/Assets/Fonts/PressStart2P.ttf.meta
+/FlippidyTap/Assets/GooglePlayConstants/*
+/FlippidyTap/Assets/GooglePlayGames/*
+/FlippidyTap/Assets/iOS Assets/*
+/FlippidyTap/Assets/Misc/*
+/FlippidyTap/Assets/PlayServicesResolver/*
+/FlippidyTap/Assets/Plugins/*
+/FlippidyTap/Assets/Scenes/*
+/FlippidyTap/Assets/Sprites/*
+/FlippidyTap/Assets/Texture/Coin 1.mat
+/FlippidyTap/Assets/Texture/Coin 1.mat.meta
+/FlippidyTap/Assets/Texture/Sparkle 1.mat
+/FlippidyTap/Assets/Texture/Sparkle 1.mat.meta
+/PlayfabIntegration
