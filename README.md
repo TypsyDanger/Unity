@@ -15,3 +15,8 @@ It can use Image and Text types, and will replace an image with a localized vers
 This is a Unity project that I put together with scenes and a series of script namespaces covern a specific set of Design Pattner that's applicable to Game Development.  All projects will run in Unity 2021.3.15f1.  See the README.md file in each folder for an explanation of the pattern it represents.
 
 Instructions for each design pattern scene are in the /DesignPatterns/README.md file
+
+### PlayFabIntegration
+This is a functioning Unity project that exemplifies a set of scripts that enable various PlayFab usages in Mobile Games.  As of writing there is only an example of a login script using a custom unique ID generated for a given device.  To run this project, you'll need to sign up for a Playfab account, login into the SDK in the Unity IDE using the Playfab Editor Extensions (installed), then update the Assets/Scripts/Constants/PlayFabConstants.cs file to use your title ID.
+
+I will be adding more usage demonstrations in the future, though this is the first little offering.
