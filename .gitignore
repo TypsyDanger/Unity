@@ -1,5 +1,6 @@
 /PlayFabIntegration/.idea
 /PlayFabIntegration/Logs/*
+/PlayFabIntegration/Library/*
 /DesignPatterns/.idea
 /DesignPatterns/Logs/*
 /DesignPatterns/Library/PackageCache/*
