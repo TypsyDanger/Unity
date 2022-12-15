@@ -1,27 +1,27 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayFab", "PlayFab.csproj", "{cea49642-9ccd-7004-b34a-5383683093c3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayFab", "PlayFab.csproj", "{c8b12956-778b-635b-4d69-951c6a9cf149}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{a249e80f-0fb5-50ff-200a-941a21aca06d}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{7e91afbe-79a4-85b8-a718-ab66004d9907}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayFabEditorExtensions", "PlayFabEditorExtensions.csproj", "{d7b86dac-93a6-e820-d9a1-9b12df5d8ead}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayFabEditorExtensions", "PlayFabEditorExtensions.csproj", "{ad10ea7d-35e1-386f-379a-11ad8b6485a8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayFabSDKEditor", "PlayFabSDKEditor.csproj", "{edb27c3b-edeb-8a27-8821-b30062c237a1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayFabSDKEditor", "PlayFabSDKEditor.csproj", "{9f2e2d19-9526-42bf-d4e4-61d28cb29fb6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{cea49642-9ccd-7004-b34a-5383683093c3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{cea49642-9ccd-7004-b34a-5383683093c3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{a249e80f-0fb5-50ff-200a-941a21aca06d}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{a249e80f-0fb5-50ff-200a-941a21aca06d}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{d7b86dac-93a6-e820-d9a1-9b12df5d8ead}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{d7b86dac-93a6-e820-d9a1-9b12df5d8ead}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{edb27c3b-edeb-8a27-8821-b30062c237a1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{edb27c3b-edeb-8a27-8821-b30062c237a1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{c8b12956-778b-635b-4d69-951c6a9cf149}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{c8b12956-778b-635b-4d69-951c6a9cf149}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7e91afbe-79a4-85b8-a718-ab66004d9907}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7e91afbe-79a4-85b8-a718-ab66004d9907}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ad10ea7d-35e1-386f-379a-11ad8b6485a8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ad10ea7d-35e1-386f-379a-11ad8b6485a8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9f2e2d19-9526-42bf-d4e4-61d28cb29fb6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9f2e2d19-9526-42bf-d4e4-61d28cb29fb6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
