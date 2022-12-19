@@ -12,7 +12,7 @@ namespace PlayFabScripts.Handlers
 
         private Action _successCallback;
         private Action _errorCallback;
-        public void DoLogin(Action theSuccessCallback = null, Action theErrorCallback = null) {
+        public void Login(Action theSuccessCallback = null, Action theErrorCallback = null) {
 
             _successCallback = theSuccessCallback;
             _errorCallback = theErrorCallback;
