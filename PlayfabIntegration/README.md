@@ -1,7 +1,10 @@
 # PlayFabIntegration
 This is a functioning Unity project to demo a PlayFab integration and some Mobile Game-related usages.
 
-Currently, it can only log-in with a Unique Identifier created for the device being used, though the demo will grow over time.
+Currently, the project will run a set of tests upon running, including:
+
+* Playfab Login
+* Get Player Title Data (this currently assumes that a lastLogin key/value exists in the player title data.  Will be updated in the future to make no assumptions);
 
 To run this, you must do the following:
 1. Sign up for a PlayFab account
